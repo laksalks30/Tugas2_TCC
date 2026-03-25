@@ -14,56 +14,22 @@
   </head>
   <body>
     <main class="app-shell">
-      <section class="panel panel-form">
-        <p class="eyebrow">Notes App</p>
-        <h1>Catat idemu sekarang.</h1>
-        <p class="subtitle">
-          Tuliskan Keluh Kesahmu ataupun anu mu iya adalah pokoknya.
-        </p>
-
-        <form id="noteForm" class="note-form">
-          <input type="hidden" id="noteId" />
-
-          <label for="judul">Judul</label>
-          <input
-            id="judul"
-            name="judul"
-            type="text"
-            placeholder="Contoh: Rencana Belajar"
-            required
-          />
-
-          <label for="isi">Isi Catatan</label>
-          <textarea
-            id="isi"
-            name="isi"
-            rows="5"
-            placeholder="Tulis catatanmu di sini..."
-            required
-          ></textarea>
-
-          <div class="actions">
-            <button type="submit" id="submitBtn">Simpan Catatan</button>
-            <button type="button" id="cancelEditBtn" class="ghost hidden">
-              Batal Edit
-            </button>
-          </div>
-        </form>
-      </section>
-
-      <section class="panel panel-list">
-        <div class="list-head">
-          <h2>Daftar Catatan</h2>
-          <button id="refreshBtn" class="ghost">Muat Ulang</button>
+      <header class="hero-banner">
+        <div>
+          <p class="eyebrow">Notes App</p>
+          <h1>Ruang catatanmu, lebih fokus.</h1>
+          <p class="subtitle">
+            Tulis ide, simpan cepat, lalu kelola dari satu dashboard yang rapi.
+          </p>
         </div>
-        <p id="statusText" class="status"></p>
+        <p class="hero-badge">Create • Edit • Delete</p>
+      </header>
 
-        <div class="notes-layout">
-          <div id="notesContainer" class="notes-titles"></div>
-
+      <section class="workspace-layout">
+        <section class="panel panel-detail-wrap">
           <article id="noteDetail" class="note-detail empty-detail">
             <h3 id="detailTitle">Pilih catatan</h3>
-            <p id="detailBody">
+            <p id="detailBody" class="note-body">
               Klik salah satu judul catatan untuk melihat detail isi catatan.
             </p>
             <p id="detailMeta" class="note-meta"></p>
@@ -72,7 +38,50 @@
               <button id="detailDeleteBtn" class="delete hidden">Hapus</button>
             </div>
           </article>
-        </div>
+        </section>
+
+        <aside class="side-rail">
+          <section class="panel panel-form">
+            <h2>Tulis Catatan</h2>
+            <form id="noteForm" class="note-form">
+              <input type="hidden" id="noteId" />
+
+              <label for="judul">Judul</label>
+              <input
+                id="judul"
+                name="judul"
+                type="text"
+                placeholder="Contoh: Rencana Belajar"
+                required
+              />
+
+              <label for="isi">Isi Catatan</label>
+              <textarea
+                id="isi"
+                name="isi"
+                rows="6"
+                placeholder="Tulis catatanmu di sini..."
+                required
+              ></textarea>
+
+              <div class="actions">
+                <button type="submit" id="submitBtn">Simpan Catatan</button>
+                <button type="button" id="cancelEditBtn" class="ghost hidden">
+                  Batal Edit
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel panel-list">
+            <div class="list-head">
+              <h2>Daftar Catatan</h2>
+              <button id="refreshBtn" class="ghost">Muat Ulang</button>
+            </div>
+            <p id="statusText" class="status"></p>
+            <div id="notesContainer" class="notes-titles"></div>
+          </section>
+        </aside>
       </section>
     </main>
 
