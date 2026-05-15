@@ -1,4 +1,5 @@
 runtime: python312
+service: frontend-laksa
 
 handlers:
   - url: /style.css
