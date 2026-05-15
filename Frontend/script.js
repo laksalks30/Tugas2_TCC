@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://136.115.136.182:3000/api/v1/notes";
+const API_BASE_URL = "https://notes-backend-235-325409493725.us-central1.run.app/api/v1/notes";
 
 const noteForm = document.getElementById("noteForm");
 const noteIdInput = document.getElementById("noteId");
