@@ -9,10 +9,9 @@ const sequelize = new Sequelize(
         host: process.env.DB_HOST,
         dialect: 'mysql',
         dialectOptions: {
-            ssl: {
-                rejectUnauthorized: false,
-            }
-        }
+            // Untuk beberapa MySQL (tanpa dukungan SSL), hapus/tidak gunakan SSL agar handshake tidak gagal.
+            ssl: false,
+        },
     }
 );
 
